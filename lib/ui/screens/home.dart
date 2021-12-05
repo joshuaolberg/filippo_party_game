@@ -1,3 +1,4 @@
+import 'package:filippo_party_game/ui/templates/screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -10,62 +11,67 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Filipo - Home'),
-      ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                margin: const EdgeInsets.only(bottom: 12.0),
-                child: const Text(
-                  'Filippo',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 48),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(bottom: 40.0),
-                child: const Text(
-                  'Das beste Trinkspiel der Welt',
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
-              Column(children: <Widget>[
+    return ScreenTemplate(
+      child: Scaffold(
+        extendBodyBehindAppBar: false,
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          title: const Text('Filipo - Home'),
+        ),
+        body: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
                 Container(
-                  width: 250,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      _navigateTo('/test');
-                    },
-                    child: Text('Spielen'),
+                  margin: const EdgeInsets.only(bottom: 12.0),
+                  child: Text(
+                    'Filippo',
+                    style: Theme.of(context).textTheme.headline1,
                   ),
                 ),
                 Container(
-                  width: 250,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      _navigateTo('/test');
-                    },
-                    child: Text('Einstellungen'),
+                  margin: const EdgeInsets.only(bottom: 40.0),
+                  child: Text(
+                    'Das beste Trinkspiel der Welt',
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
-                Container(
-                  width: 250,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      _navigateTo('/test');
-                    },
-                    child: Text('Über diese App'),
+                Column(children: <Widget>[
+                  Container(
+                    width: 250,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        _navigateTo('/test');
+                      },
+                      child: Text('Spielen'),
+                    ),
                   ),
-                ),
-              ]),
-            ],
-          ),
-        ],
+                  Container(
+                    width: 250,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        _navigateTo('/test');
+                      },
+                      child: Text('Einstellungen'),
+                    ),
+                  ),
+                  Container(
+                    width: 250,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        _navigateTo('/test');
+                      },
+                      child: Text('Über diese App'),
+                    ),
+                  ),
+                ]),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

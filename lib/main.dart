@@ -14,6 +14,14 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Filipo - Party Game',
+      theme: ThemeData(
+        textTheme: const TextTheme(
+          headline1: TextStyle(fontSize: 55.0, fontWeight: FontWeight.bold, color: Colors.white),
+          headline2: TextStyle(fontSize: 48.0, fontWeight: FontWeight.bold, color: Colors.white),
+          subtitle1: TextStyle(fontSize: 18.0, color: Colors.white),
+          bodyText1: TextStyle(fontSize: 14.0, fontFamily: 'Hind', color: Colors.white),
+        ),
+      ),
       home: HomeScreen(),
       routes: {
         '/test': (context) => TestScreen(),

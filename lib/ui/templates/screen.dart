@@ -1,17 +1,12 @@
 import 'package:flutter/material.dart';
 
-/*
 class ScreenTemplate extends StatelessWidget {
   ScreenTemplate({
-    @required this.child,
-    this.showBack = false,
-    this.onBack,
-    //this.onBack,
+    required this.child,
   });
 
   final Widget child;
-  final bool showBack;
-  final Function onBack;
+
 
   @override
   Widget build(BuildContext context) {
@@ -37,4 +32,3 @@ class ScreenTemplate extends StatelessWidget {
     );
   }
 }
-*/

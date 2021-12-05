@@ -1,9 +1,11 @@
+import 'package:filippo_party_game/ui/screens/players.dart';
 import 'package:filippo_party_game/ui/screens/test.dart';
 import 'package:flutter/material.dart';
 
 import 'ui/screens/home.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(App());
 }
 
@@ -25,6 +27,7 @@ class App extends StatelessWidget {
       home: HomeScreen(),
       routes: {
         '/test': (context) => TestScreen(),
+        '/players': (context) => PlayersScreen(),
       },
     );
   }

@@ -15,10 +15,6 @@ class HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         extendBodyBehindAppBar: false,
         backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          title: const Text('Filipo - Home'),
-        ),
         body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -44,9 +40,9 @@ class HomeScreenState extends State<HomeScreen> {
                     width: 250,
                     child: ElevatedButton(
                       onPressed: () {
-                        _navigateTo('/test');
+                        _navigateTo('/players');
                       },
-                      child: Text('Spielen'),
+                      child: Text('Spiel starten'),
                     ),
                   ),
                   Container(

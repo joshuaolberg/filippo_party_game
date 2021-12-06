@@ -2,6 +2,8 @@ import 'package:filippo_party_game/ui/templates/screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
   @override
   HomeScreenState createState() {
     return HomeScreenState();
